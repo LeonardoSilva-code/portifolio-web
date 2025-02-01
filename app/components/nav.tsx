@@ -2,8 +2,10 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 export const Navigation: React.FC = () => {
+	const { t } = useTranslation();
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
 
@@ -32,28 +34,29 @@ export const Navigation: React.FC = () => {
 							href="/projects"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							Projects
+							 {t("PROJECTS")}
 						</Link>
 						<Link
 							href="/about"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							About me
+							{t("ABOUT_ME")}
 						</Link>
 						<Link
 							href="/contact"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							Contact
+							{t("CONTACT")}
 						</Link>
 					</div>
-
+							
 					<Link
 						href="/"
 						className="duration-200 text-zinc-300 hover:text-zinc-100"
 					>
 						<ArrowLeft className="w-6 h-6 " />
 					</Link>
+					
 				</div>
 			</div>
 		</header>

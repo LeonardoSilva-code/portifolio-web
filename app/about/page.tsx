@@ -1,9 +1,13 @@
+'use client';
+
 import React from "react";
 import { Navigation } from "../components/nav";
 import { FaJava, FaNodeJs, FaJira } from "react-icons/fa";
 import { SiSpringboot,SiDocker, SiJavascript ,SiNestjs, SiJenkins, SiRedis, SiPostgresql, SiMysql, SiAngular, SiNextdotjs, SiTypescript, SiSwagger, SiApachekafka, SiGit } from "react-icons/si";
+import { useTranslation } from 'react-i18next';
 
 export default function AboutMePage() {
+  const { t } = useTranslation();
   const techIcons = [
     { icon: FaJava, name: 'Java', color: '#007396' },
     { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
@@ -50,10 +54,10 @@ export default function AboutMePage() {
       <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
         <div className="max-w-2xl mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-            About Me
+            {t("ABOUT_ME")}
           </h2>
           <p className="mt-4 text-zinc-400">
-            Hi, I’m Leonardo Silva, a passionate Software Developer. With over 3 years of experience, I have dedicated myself to building scalable and high-performance systems, aligning myself with the demands of companies that value robust technology and efficient solutions.
+          {t("ABOUT_ME_TEXT")}
           </p>
         </div>
 
@@ -61,28 +65,28 @@ export default function AboutMePage() {
 
         <div className="max-w-2xl mx-auto space-y-6 lg:mx-0">
           <section>
-            <h3 className="text-2xl font-bold text-zinc-100 sm:text-3xl">My Journey</h3>
+            <h3 className="text-2xl font-bold text-zinc-100 sm:text-3xl">{t("MY_JOURNEY")}</h3>
             <p className="mt-4 text-zinc-400 leading-8">
-              My professional journey began in October 2021 at <a href="https://www.datlaz.com" target="blank" className="text-blue-400 hover:underline">Datlaz</a>, 
-              where I worked on the design of a microservices architecture, developing integrated RESTful and GraphQL APIs using Apache Kafka to ensure asynchronous communication. I used Spring Boot (Java/Kotlin) and NestJS (Node.js/TypeScript), combined with PostgreSQL, to deliver modular, easy-to-maintain solutions. In addition, I actively collaborated in front-end development, using Angular to create dynamic interfaces and Next.js for web applications with optimized rendering, ensuring a fluid experience for end users.
+              {t("MY_JOURNEY_TEXT_1")}<a href="https://www.datlaz.com" target="blank" className="text-blue-400 hover:underline">Datlaz</a>, 
+              {t("MY_JOURNEY_TEXT_2")}
             </p>
             <p className="mt-4 text-zinc-400 leading-8">
-              In October 2024, I joined  <a href="https://www.deal.com.br/" target="blank" className="text-blue-400 hover:underline">Deal</a>, , where i continue to improve my expertise in microservices, working on projects for Banco Votorantim. I implement APIs with Spring Boot and Hexagonal Architecture, using Swagger for detailed documentation and agile versioning. I also orchestrated processes with Apache Camel, integrating heterogeneous systems efficiently. To ensure quality, I used unit tests (JUnit/Mockito), adopting MySQL as the main database and GCP (Google Cloud Platform) to optimize cloud operations.
+            {t("MY_JOURNEY_TEXT_3")}<a href="https://www.deal.com.br/" target="blank" className="text-blue-400 hover:underline">Deal</a>, {t("MY_JOURNEY_TEXT_4")}
             </p>
           </section>
 
           <section>
-            <h3 className="text-2xl font-bold text-zinc-100 sm:text-3xl">Skills & Expertise</h3>
+            <h3 className="text-2xl font-bold text-zinc-100 sm:text-3xl">{t("SKILLS_AND_EXPERTISE")}</h3>
             <p className="mt-4 text-zinc-400 leading-8">
-              My technical skill set includes:
+              {t("MY_TECHNICAL_SKILL_SET_INCLUDES")}
             </p>
             <ul className="mt-4 space-y-2 text-zinc-400 list-disc list-inside">
-              <li>Developing scalable microservices architecture</li>
-              <li>Building APIs</li>
-              <li>Working with backend frameworks like Spring Boot, and NestJS</li>
-              <li>Relational Database management</li>
-              <li>Writing unit tests with JUnit and Mockito</li>
-              <li>Developing frontend aplications with frameworks like Angular and NextJS</li>
+              <li>{t("TECHNICAL_SKILL_1")}</li>
+              <li>{t("TECHNICAL_SKILL_2")}</li>
+              <li>{t("TECHNICAL_SKILL_3")}</li>
+              <li>{t("TECHNICAL_SKILL_4")}</li>
+              <li>{t("TECHNICAL_SKILL_5")}</li>
+              <li>{t("TECHNICAL_SKILL_6")}</li>
             </ul>
                     <div className="mt-6 flex flex-wrap gap-6"> {/* Aumente o gap para 6 */}
                   {techIcons.map((tech, index) => {
@@ -115,10 +119,10 @@ export default function AboutMePage() {
           </section>
 
           <section>
-            <h3 className="text-2xl font-bold text-zinc-100 sm:text-3xl">Education</h3>
+            <h3 className="text-2xl font-bold text-zinc-100 sm:text-3xl">{t("EDUCATION")}</h3>
             <div className="mt-4 flex items-start gap-4">
               <p className="text-zinc-400 leading-8">
-                I graduated with honors in Computer Science from the Pontifical Catholic University of Paraná in July 2024. My academic journey equipped me with a strong foundation in software development and problem-solving skills.
+                {t("EDUCATION_TEXT")}
               </p>
               <a 
                 href="https://www.pucpr.br" 

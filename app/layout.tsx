@@ -3,6 +3,8 @@ import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
+import '../i18n';
+import LanguageSelector from "./components/LanguageSelector";
 
 export const metadata: Metadata = {
   title: {
@@ -69,6 +71,9 @@ export default function RootLayout({
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
+        <nav className="absolute top-4 right-4">
+          <LanguageSelector />
+        </nav>
         {children}
       </body>
     </html>

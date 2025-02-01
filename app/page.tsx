@@ -1,25 +1,30 @@
+'use client';
+
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";
+import { useTranslation } from 'react-i18next';
 
 const navigation = [
-  { name: "Projects", href: "/projects" },
-  { name: "About me", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "PROJECTS", href: "/projects" },
+  { name: "ABOUT_ME", href: "/about" },
+  { name: "CONTACT", href: "/contact" },
 ];
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <nav className="my-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
             <Link
+              data-translate={item.name}
               key={item.href}
               href={item.href}
               className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
             >
-              {item.name}
+              {t(item.name)}
             </Link>
           ))}
         </ul>
@@ -36,7 +41,7 @@ export default function Home() {
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
-        Welcome to my portfolio! Explore my projects, skills, and experience as a software developer. Let's build something amazing together!.
+        {t("WELCOME_MESAGE")}
         </h2>
       </div>
     </div>

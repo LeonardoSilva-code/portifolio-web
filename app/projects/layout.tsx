@@ -1,3 +1,5 @@
+import '../../i18n';
+
 export default function ProjectsLayout({
 	children,
 }: { children: React.ReactNode }) {
