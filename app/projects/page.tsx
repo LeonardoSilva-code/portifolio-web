@@ -18,20 +18,27 @@ export default async function ProjectsPage() {
     },
     {
       id: 1,
+      title: "nest-task-manager",
+      description: "PROJECT_DESCRIPTION_5",
+      github: "https://github.com/LeonardoSilva-code/nest-task-manager",
+      tags: ["Typescript", "NestJS", "JSON Web Token"]
+    },
+    {
+      id: 2,
       title: "password-guard",
       description:  "PROJECT_DESCRIPTION_2",
       github: "https://github.com/LeonardoSilva-code/password-guard",
       tags: ["Python", "SECURITY", "CRYPTOGRAPHY"]
     },
     {
-      id: 2,
+      id: 3,
       title: "file-system BackEnd",
       description:  "PROJECT_DESCRIPTION_3",
       github: "https://github.com/LeonardoSilva-code/file-system",
       tags: ["Java", "Spring Boot", "Rest API", "Back-End"]
     },
     {
-      id: 3,
+      id: 4,
       title: "file-system FrontEnd",
       description:  "PROJECT_DESCRIPTION_4",
       github: "https://github.com/LeonardoSilva-code/file-system-fe",

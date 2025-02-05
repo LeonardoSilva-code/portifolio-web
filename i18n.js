@@ -37,7 +37,8 @@ i18n
           "PROJECT_DESCRIPTION_4": "Angular project. Provide a interface for the file-system BackEnd.",
           "HEXAGONAL_ARCHITECTURE": "Hexagonal Architecture",
           "SECURITY": "Security",
-          "CRYPTOGRAPHY": "Cryptography"
+          "CRYPTOGRAPHY": "Cryptography",
+          "PROJECT_DESCRIPTION_5": "Is an application developed in TypeScript using the NestJS framework to manage tasks guaranteeing the security of operations through JWT (JSON Web Token) authentication."
         },
       },
       pt: {
@@ -70,7 +71,8 @@ i18n
           "PROJECT_DESCRIPTION_4": "Projeto Angular. Fornecer uma interface para o BackEnd do sistema de pastas e arquivos.",
           "HEXAGONAL_ARCHITECTURE": "Arquitetura Hexagonal",
           "SECURITY": "Segurança",
-          "CRYPTOGRAPHY": "Criptografia"
+          "CRYPTOGRAPHY": "Criptografia",
+          "PROJECT_DESCRIPTION_5": "É uma aplicação desenvolvida em TypeScript que utiliza a estrutura NestJS para gerir tarefas, garantindo a segurança das operações através da autenticação JWT (JSON Web Token)."
         },
       },
     }, 
